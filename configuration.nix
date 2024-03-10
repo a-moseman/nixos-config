@@ -88,8 +88,9 @@
     description = "Glyphical";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
-      kate
+     	firefox
+     	kate
+	zettlr
     #  thunderbird
     ];
   };
