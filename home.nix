@@ -1,7 +1,10 @@
 { pkgs }: {
 	programs.git = {
 		enable = true;
-		package = pkgs.gitFull;
-		config.credential.helper = "libsecret";
+		extraConfig = {
+			credential.helper = "${
+				pkgs.git.override { withLibsecret = true; }
+			}/bin/git-credential-libsecret";
+		};
 	};
 }
