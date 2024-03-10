@@ -12,5 +12,6 @@
 			./configuration.nix
 		];
 	};
+	home-manager.users.glyphical = import ./home.nix;
   };
 }
