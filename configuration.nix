@@ -91,6 +91,7 @@
      	firefox
      	kate
 	zettlr
+	jetbrains.idea-community
     #  thunderbird
     ];
   };
