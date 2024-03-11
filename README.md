@@ -1,1 +1,4 @@
-# todo
+# My NixOS Configuration
+
+## Setup
+todo
