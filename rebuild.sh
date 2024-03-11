@@ -13,6 +13,9 @@ for i in "$@" ; do
 		is_commit=true
 		is_verbose=true
 	fi
+	if [[ $i == "-v" ]] ; then
+		is_verbose=true
+	fi
 done
 # Verify valid arguments
 if [[ "$is_commit" = true &&  "$#" -ne 2 ]] ; then
