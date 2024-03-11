@@ -20,24 +20,20 @@ if [[ "$is_commit" = true &&  "$#" -ne 2 ]] ; then
 	exit 1
 fi
 # Rebuild and potentially commit
-echo -e "$BLUE"
-echo "Rebuilding..."
+echo -e "${BLUE}Rebuilding..."
 REBUILD=$(sudo nixos-rebuild switch  2>/dev/null)  #> /dev/null 2>&1 redirects output of rebuild to /dev/null
 if [[ "$is_verbose" = true ]] ; then
-	echo -e "$BBLACK"
-	echo "$REBUILD"
+	echo -e "\t${BBLACK}${REBUILD}"
 fi
 if [ "$is_commit" = true ] ; then
-	echo -e "$BLUE"
-	echo "Commiting..."
+	echo -e "${BLUE}Commiting..."
 	ADD=$(git add * 2>/dev/null)
 	COMMIT=$(git commit -m "$2" 2>/dev/null)
-	echo -e "Pushing..."
+	echo -e "${BLUE}Pushing..."
 	PUSH=$(git push 2>/dev/null)
 	if [[ "$is_verbose" = true ]] ; then
-		echo -e "$BBLACK"
-		echo "$ADD"
-		echo "$COMMIT"
-		echo "$PUSH"
+		echo "${BLACK}\t${ADD}"
+		echo "${BLACK}\t${COMMIT}"
+		echo "${BBLACK}\t${PUSH}"
 	fi
 fi
