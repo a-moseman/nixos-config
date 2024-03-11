@@ -93,7 +93,7 @@
 	zettlr
 	libreoffice
 	jetbrains.idea-community
-    #  thunderbird
+	thunderbird
     ];
   };
 
