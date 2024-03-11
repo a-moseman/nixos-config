@@ -12,7 +12,7 @@ if [ "$is_commit" = true ] -a [ "$#" !+ 2 ] ; then
 	exit 1
 fi
 # Rebuild and potentially commit
-sudo nixos-rebuild swtich
+sudo nixos-rebuild switch
 if [ "$is_commit" = true ] ; then
 	git add *
 	git commit -m "$2"
