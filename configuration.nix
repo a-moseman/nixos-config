@@ -12,6 +12,9 @@
 
   # Enable flakes - glyphical
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+	
+	# Enable unfree packages
+	nixpkgs.config.allowUnfree = true;	
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -94,6 +97,7 @@
 	libreoffice
 	jetbrains.idea-community
 	thunderbird
+	discord
     ];
   };
 
