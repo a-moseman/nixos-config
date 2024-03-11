@@ -32,8 +32,8 @@ if [ "$is_commit" = true ] ; then
 	echo -e "${BLUE}Pushing..."
 	PUSH=$(git push 2>/dev/null)
 	if [[ "$is_verbose" = true ]] ; then
-		echo "${BLACK}\t${ADD}"
-		echo "${BLACK}\t${COMMIT}"
-		echo "${BBLACK}\t${PUSH}"
+		echo "\t${BBLACK}${ADD}"
+		echo "\t${BBLACK}${COMMIT}"
+		echo "\t${BBLACK}${PUSH}"
 	fi
 fi
