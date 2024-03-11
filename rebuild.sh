@@ -23,7 +23,7 @@ fi
 echo -e "${BLUE}Rebuilding..."
 REBUILD=$(sudo nixos-rebuild switch  2>/dev/null)  #> /dev/null 2>&1 redirects output of rebuild to /dev/null
 if [[ "$is_verbose" = true ]] ; then
-	echo -e "\t${BBLACK}${REBUILD}"
+	echo -e "${BBLACK}${REBUILD}"
 fi
 if [ "$is_commit" = true ] ; then
 	echo -e "${BLUE}Commiting..."
@@ -32,8 +32,8 @@ if [ "$is_commit" = true ] ; then
 	echo -e "${BLUE}Pushing..."
 	PUSH=$(git push 2>/dev/null)
 	if [[ "$is_verbose" = true ]] ; then
-		echo -e "\t${BBLACK}${ADD}"
-		echo -e "\t${BBLACK}${COMMIT}"
-		echo -e "\t${BBLACK}${PUSH}"
+		echo -e "${BBLACK}${ADD}"
+		echo -e "${BBLACK}${COMMIT}"
+		echo -e "${BBLACK}${PUSH}"
 	fi
 fi
