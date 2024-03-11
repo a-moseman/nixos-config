@@ -91,7 +91,7 @@
     description = "Glyphical";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-     	firefox
+	librewolf
      	kate
 	zettlr
 	libreoffice
