@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+	./hardware-configuration.nix
     ];
 
   # Enable flakes - glyphical
@@ -91,6 +91,7 @@
      	firefox
      	kate
 	zettlr
+	libreoffice
 	jetbrains.idea-community
     #  thunderbird
     ];
