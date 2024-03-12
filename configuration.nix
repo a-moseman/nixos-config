@@ -98,6 +98,7 @@
 	jetbrains.idea-community
 	thunderbird
 	discord
+	tor-browser-bundle-bin
     ];
   };
 
