@@ -98,7 +98,9 @@
 	jetbrains.idea-community
 	thunderbird
 	discord
+	tor
 	tor-browser-bundle-bin
+	hydrus
     ];
   };
 
