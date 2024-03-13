@@ -115,11 +115,14 @@
   #  wget
   ];
 
-	services.restic.backups.full = {
+	services.restic.backups.nas = {
 		initialize = true;
 		repository = "sftp:amoseman@10.0.0.33:laptop_backups";
 		passwordFile = "/home/glyphical/secrets/restic-password";
-		timerConfig.OnUnitActiveSec = "2h";
+		timerConfig = {
+			OnCalendar = "daily";
+			Persistent = true;
+		};
 		paths = [ "/home" ];
 		exclude = [
 			".thunderbird"
@@ -130,7 +133,26 @@
 			"sftp.command='ssh -i /home/glyphical/secrets/restic-nas-ssh-keys -o StrictHostKeyChecking=no amoseman@10.0.0.33 -s sftp'"
 		];
 		pruneOpts = [
-			"--keep-last 5"
+			"--keep-last 3"
+		];
+	};
+	services.restic.backups.backblaze = {
+		initialize = true;
+		repositoryFile = "/home/glyphical/secrets/backblaze-repository";
+		environmentFile = "/home/glyphical/secrets/backblaze-environment";
+		passwordFile = "/home/glyphical/secrets/restic-password";
+		timerConfig = {
+			OnCalendar = "weekly";
+			Persistent = true;
+		};
+		paths = [ "/home" ];
+		exclude = [
+			".thunderbird"
+			"secrets"
+			"nix-config"
+		];
+		pruneOpts = [
+			"--keep-last 3"
 		];
 	};
 	users.users.restic = {
@@ -143,6 +165,7 @@
 		permissions = "u=rwx,g=,o=";
 		capabilities = "cap_dac_read_search=+ep";
 	};
+	
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
