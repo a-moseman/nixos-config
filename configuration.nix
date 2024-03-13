@@ -94,6 +94,7 @@
 	librewolf
      	kate
 	zettlr
+	zotero
 	libreoffice
 	jetbrains.idea-community
 	thunderbird
