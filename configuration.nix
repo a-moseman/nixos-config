@@ -109,9 +109,39 @@
   environment.systemPackages = with pkgs; [
 	git
 	git-credential-oauth
+	restic
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
+
+	services.restic.backups.full = {
+		initialize = true;
+		repository = "sftp:amoseman@10.0.0.33:laptop_backups";
+		passwordFile = "/home/glyphical/secrets/restic-password";
+		timerConfig.OnUnitActiveSec = "2h";
+		paths = [ "/home" ];
+		exclude = [
+			".thunderbird"
+			"secrets"
+			"nix-config" 
+		];
+		extraOptions = [
+			"sftp.command='ssh -i /home/glyphical/secrets/restic-nas-ssh-keys -o StrictHostKeyChecking=no amoseman@10.0.0.33 -s sftp'"
+		];
+		pruneOpts = [
+			"--keep-last 5"
+		];
+	};
+	users.users.restic = {
+		isNormalUser = true;
+	};
+	security.wrappers.restic = {
+		source = "${pkgs.restic.out}/bin/restic";
+		owner = "restic";
+		group = "users";
+		permissions = "u=rwx,g=,o=";
+		capabilities = "cap_dac_read_search=+ep";
+	};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
