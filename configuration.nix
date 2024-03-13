@@ -111,6 +111,7 @@
 	git
 	git-credential-oauth
 	restic
+	libnotify
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
@@ -164,6 +165,26 @@
 		group = "users";
 		permissions = "u=rwx,g=,o=";
 		capabilities = "cap_dac_read_search=+ep";
+	};
+
+	systemd.services.restic-backups-nas.unitConfig.OnFailure = "notify-backup-failed.service";
+	systemd.services.restic-backups-backblaze.unitConfig.OnFailure = "notify-backup-failed.service";
+	
+	systemd.services."notify-backup-failed" = {
+		enable = true;
+		description = "Notify on failed backup";
+		serviceConfig = {
+			Type = "oneshot";
+			User = config.users.users.glyphical.name;
+		};
+		environment.DBUS_SESSION_BUS_ADDRESS = "unix:path=/run/user/${
+			toString config.users.users.glyphical.uid
+			}/bus";
+		script = ''
+			${pkgs.libnotify}/bin/notify-send --urgency=critical \ 
+			"Backup failed" \
+			"$(journalctl -u restic-backups-nas -n 5 -o cat)"
+		'';
 	};
 	
 
