@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-		services.restic.backups.nas = {
+	services.restic.backups.nas = {
 		enable = true;
 		wantedBy = [ "glyphical.target" ];
 		initialize = true;
