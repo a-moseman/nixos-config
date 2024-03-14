@@ -3,7 +3,7 @@
 		enable = true;
 		wantedBy = [ "glyphical.target" ];
 		initialize = true;
-		repository = "sftp:amoseman@10.0.0.33:laptop_backups";
+		repositoryFile = "/home/glyphical/secrets/nas-repository";
 		passwordFile = "/home/glyphical/secrets/restic-password";
 		timerConfig = {
 			OnCalendar = "daily";
