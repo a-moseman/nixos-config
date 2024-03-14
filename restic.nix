@@ -16,7 +16,7 @@
 			"nix-config"
 		];
 		extraOptions = [
-			"sftp.command='ssh -i /home/glyphical/secrets/restic-nas-ssh-keys -o StrictHostKeyChecking=no amoseman@10.0.0.33 -s sftp'"
+			(builtins.readFile /home/glyphical/secrets/nas-extra-options)
 		];
 		pruneOpts = [
 			"--keep-last 3"
