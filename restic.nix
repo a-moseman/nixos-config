@@ -10,12 +10,7 @@
 			Persistent = true;
 		};
 		paths = [ "/home" ];
-		exclude = [
-			".thunderbird"
-			"secrets"
-			"nix-config"
-			".cache"
-		];
+		exclude = (builtins.splitString "\n" (builtins.readFile ./restic-exclude));
 		extraOptions = [
 			(builtins.readFile /home/glyphical/secrets/nas-extra-options)
 		];
@@ -35,12 +30,7 @@
 			Persistent = true;
 		};
 		paths = [ "/home" ];
-		exclude = [
-			".thunderbird"
-			"secrets"
-			"nix-config"
-			".cache"
-		];
+		exclude = (builtins.splitString "\n" (builtins.readFile ./restic-exclude));
 		pruneOpts = [
 			"--keep-last 3"
 		];
