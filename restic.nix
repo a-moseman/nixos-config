@@ -14,6 +14,7 @@
 			".thunderbird"
 			"secrets"
 			"nix-config"
+			".cache"
 		];
 		extraOptions = [
 			(builtins.readFile /home/glyphical/secrets/nas-extra-options)
@@ -38,6 +39,7 @@
 			".thunderbird"
 			"secrets"
 			"nix-config"
+			".cache"
 		];
 		pruneOpts = [
 			"--keep-last 3"
