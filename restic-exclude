@@ -2,3 +2,5 @@
 secrets
 nixos-config
 .cache
+.ssh
+.bash_history
