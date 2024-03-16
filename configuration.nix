@@ -100,6 +100,7 @@
 			tor
 			tor-browser-bundle-bin
 			hydrus
+			wcalc
     		];
   	};
 
