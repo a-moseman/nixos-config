@@ -5,7 +5,7 @@
 { config, pkgs, ... }: {
   	imports = [
 		./hardware-configuration.nix # Include the results of the hardware scan.
-		./restic.nix
+		./backups.nix
     	];
 
   	# Enable flakes - glyphical
