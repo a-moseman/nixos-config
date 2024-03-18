@@ -5,6 +5,7 @@
 { config, pkgs, ... }: {
   	imports = [
 		./hardware-configuration.nix # Include the results of the hardware scan.
+		./user.nix
 		./backups.nix
 		./laptop.nix
     	];
@@ -83,28 +84,6 @@
 
   	# Enable touchpad support (enabled default in most desktopManager).
   	# services.xserver.libinput.enable = true;
-
-  	# Define a user account. Don't forget to set a password with ‘passwd’.
-  	users.users.glyphical = {
-    		isNormalUser = true;
-    		description = "Glyphical";
-    		extraGroups = [ "networkmanager" "wheel" ];
-    		packages = with pkgs; [
-			librewolf
-     			kate
-			zettlr
-			zotero
-			libreoffice
-			jetbrains.idea-community
-			thunderbird
-			discord
-			tor
-			tor-browser-bundle-bin
-			hydrus
-			wcalc
-			python312
-    		];
-  	};
 
   	# List packages installed in system profile. To search, run:
   	# $ nix search wget
