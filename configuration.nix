@@ -102,6 +102,7 @@
 			tor-browser-bundle-bin
 			hydrus
 			wcalc
+			python312
     		];
   	};
 
