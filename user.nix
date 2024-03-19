@@ -4,6 +4,7 @@
 		description = "Glyphical";
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [
+			thunderbird
 			librewolf
 			kate
 			zettlr
