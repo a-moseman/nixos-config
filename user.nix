@@ -17,6 +17,7 @@
 			hydrus
 			wcalc
 			python312
+			dutree
 		];
 	};
 }
