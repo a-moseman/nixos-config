@@ -18,6 +18,7 @@
 			wcalc
 			python312
 			dutree
+			wireshark
 		];
 	};
 }
