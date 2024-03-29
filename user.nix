@@ -19,6 +19,7 @@
 			python312
 			dutree
 			wireshark
+			tmux
 		];
 	};
 }
