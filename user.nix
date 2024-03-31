@@ -23,6 +23,7 @@
 			gimp
 			tomb
 			pinentry
+			pinentry-curses
 		];
 	};
 }
