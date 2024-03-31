@@ -20,6 +20,8 @@
 			dutree
 			wireshark
 			tmux
+			gimp
+			tomb
 		];
 	};
 }
