@@ -22,6 +22,7 @@
 			tmux
 			gimp
 			tomb
+			pinentry
 		];
 	};
 }
