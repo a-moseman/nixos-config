@@ -9,6 +9,7 @@
 		./user.nix
 		./backups.nix
 		./laptop.nix
+		./postgresql.nix
     	];
 	
 	services.avahi = {
@@ -29,7 +30,7 @@
 
 	boot.initrd.luks.devices."luks-ba0201d2-0110-4ca8-ab1e-e6043e18aa0b".device = "/dev/disk/by-uuid/ba0201d2-0110-4ca8-ab1e-e6043e18aa0b";
  	networking.hostName = "nixos"; # Define your hostname.
- 	# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+ 	#networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
  	# Configure network proxy if necessary
  	# networking.proxy.default = "http://user:password@proxy:port/";
@@ -37,6 +38,10 @@
 
  	# Enable networking
 	networking.networkmanager.enable = true;
+
+	networking.firewall = {
+		enable = true;
+	};
 
   	# Enable the X11 windowing system.
   	services.xserver.enable = true;
