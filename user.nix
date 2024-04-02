@@ -24,6 +24,7 @@
 			tomb
 			pinentry
 			pinentry-curses
+			haruna
 		];
 	};
 }
