@@ -76,10 +76,6 @@
     		#media-session.enable = true;
   	};
 
-	# enable stuff for usb connected devices (to cd into them and such)
-	services.gvfs.enable = true;
-	services.udisks2.enable = true;
-
   	# Enable touchpad support (enabled default in most desktopManager).
   	# services.xserver.libinput.enable = true;
 
