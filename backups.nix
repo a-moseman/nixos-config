@@ -31,8 +31,8 @@
 
 	services.restic.backups.nas = {
 		initialize = true;
-		repositoryFile = "/home/glyphical/secrets/nas-repository";
-		passwordFile = "/home/glyphical/secrets/restic-password";
+		repositoryFile = "/home/glyphical/Secrets/nas-repository";
+		passwordFile = "/home/glyphical/Secrets/restic-password";
 		timerConfig = {
 			OnCalendar = "daily";
 			Persistent = true;
@@ -40,14 +40,14 @@
 		paths = [ "/home" ];
 		exclude = [
 			".thunderbird"
-			"secrets"
+			"Secrets"
 			"nixos-config"
 			".cache"
 			".ssh"
 			".bash_history"
 		];
 		extraOptions = [
-			"sftp.command='ssh -i /home/glyphical/secrets/restic-nas-ssh-keys -o StrictHostKeyChecking=no amoseman@10.0.0.33 -s sftp'"
+			"sftp.command='ssh -i /home/glyphical/Secrets/restic-nas-ssh-keys -o StrictHostKeyChecking=no amoseman@10.0.0.33 -s sftp'"
 		];
 		pruneOpts = [
 			"--keep-last 3"
@@ -55,9 +55,9 @@
 	};
 	services.restic.backups.backblaze = {
 		initialize = true;
-		repositoryFile = "/home/glyphical/secrets/backblaze-repository";
-		environmentFile = "/home/glyphical/secrets/backblaze-environment";
-		passwordFile = "/home/glyphical/secrets/restic-password";
+		repositoryFile = "/home/glyphical/Secrets/backblaze-repository";
+		environmentFile = "/home/glyphical/Secrets/backblaze-environment";
+		passwordFile = "/home/glyphical/Secrets/restic-password";
 		timerConfig = {
 			OnCalendar = "weekly";
 			Persistent = true;
@@ -65,7 +65,7 @@
 		paths = [ "/home" ];
 		exclude = [
 			".thunderbird"
-			"secrets"
+			"Secrets"
 			"nixos-config"
 			".cache"
 			".ssh"
