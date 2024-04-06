@@ -25,6 +25,7 @@
 			pinentry
 			pinentry-curses
 			haruna
+			nodejs
 		];
 	};
 }
