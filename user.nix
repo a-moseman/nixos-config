@@ -5,6 +5,7 @@
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [
 			thunderbird
+			firefox # just for sites that require HTML5, as librewolf does not support that
 			librewolf
 			kate
 			zettlr
