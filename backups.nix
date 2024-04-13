@@ -17,15 +17,12 @@
 		description = "Notify on failed backup";
 		serviceConfig = {
 			Type = "oneshot";
-			User = config.users.users.glyphical.name;
 		};
 		environment.DBUS_SESSION_BUS_ADDRESS = "unix:path=/run/user/${
 			toString config.users.users.glyphical.uid
 			}/bus";
 		script = ''
-			${pkgs.libnotify}/bin/notify-send --urgency=critical \
-			"Backup failed" \
-			"$(journalctl -u restic-backups-nas -n 5 -o cat)"
+			${pkgs.libnotify}/bin/notify-send --urgency=critical "Backup failed"
 		'';
 	};
 
