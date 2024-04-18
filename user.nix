@@ -26,6 +26,7 @@
 			pinentry-curses
 			haruna
 			nodejs
+			kleopatra
 		];
 	};
 }
