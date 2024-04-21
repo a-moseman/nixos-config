@@ -27,6 +27,7 @@
 			haruna
 			nodejs
 			kleopatra
+			nudoku
 		];
 	};
 }
