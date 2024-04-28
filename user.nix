@@ -28,6 +28,7 @@
 			nodejs
 			kleopatra
 			nudoku
+			plantuml
 		];
 	};
 }
