@@ -9,13 +9,17 @@
 		./user.nix
 		./backups.nix
 		./laptop.nix
-		./postgresql.nix
     	];
 	
 	services.avahi = {
 		enable = true;
 		nssmdns = true;
 		openFirewall = true;
+	};
+
+	services.mysql = {
+		enable = true;
+		package = pkgs.mariadb;
 	};
 
   	# Enable flakes - glyphical
