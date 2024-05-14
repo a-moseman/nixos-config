@@ -29,6 +29,7 @@
 			kleopatra
 			nudoku
 			plantuml
+			zulu17
 		];
 	};
 }
