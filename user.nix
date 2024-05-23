@@ -30,6 +30,7 @@
 			nudoku
 			plantuml
 			zulu17
+			sqlite
 		];
 	};
 }
