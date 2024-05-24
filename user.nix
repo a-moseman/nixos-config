@@ -31,6 +31,7 @@
 			plantuml
 			zulu17
 			sqlite
+			taskwarrior
 		];
 	};
 }
