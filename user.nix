@@ -31,7 +31,6 @@
 			plantuml
 			zulu17
 			sqlite
-			todo-txt-cli
 		];
 	};
 }
