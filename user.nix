@@ -32,6 +32,7 @@
 			zulu17
 			sqlite
 			taskwarrior
+			openshot-qt
 		];
 	};
 }
