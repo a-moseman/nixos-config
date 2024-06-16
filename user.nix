@@ -33,6 +33,7 @@
 			sqlite
 			taskwarrior
 			openshot-qt
+			xca
 		];
 	};
 }
