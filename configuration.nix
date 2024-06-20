@@ -28,6 +28,8 @@
 	# Enable unfree packages
 	nixpkgs.config.allowUnfree = true;	
 
+	services.envfs.enable = true; # allows for typical bash shebang
+
  	# Bootloader.
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
