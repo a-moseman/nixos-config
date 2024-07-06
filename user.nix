@@ -29,7 +29,7 @@
 			kleopatra
 			nudoku
 			plantuml
-			jdk
+			temurin-bin
 			sqlite
 			taskwarrior
 			openshot-qt
