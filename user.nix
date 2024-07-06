@@ -29,7 +29,6 @@
 			kleopatra
 			nudoku
 			plantuml
-			zulu17
 			jdk
 			sqlite
 			taskwarrior
