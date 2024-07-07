@@ -30,6 +30,7 @@
 			nudoku
 			plantuml
 			jdk21_headless
+			jbang
 			sqlite
 			taskwarrior
 			openshot-qt
