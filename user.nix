@@ -35,6 +35,7 @@
 			taskwarrior
 			openshot-qt
 			xca
+			processing
 		];
 	};
 }
