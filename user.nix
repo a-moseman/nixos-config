@@ -36,6 +36,7 @@
 			openshot-qt
 			xca
 			processing
+			milkytracker
 		];
 	};
 }
