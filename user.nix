@@ -37,6 +37,10 @@
 			xca
 			processing
 			milkytracker
+			lmms
+			zoom-us
+			docker
+			minio
 		];
 	};
 }

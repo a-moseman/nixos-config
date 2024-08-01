@@ -11,6 +11,8 @@
 		./laptop.nix
     	];
 	
+	virtualisation.docker.enable = true;
+
 	services.avahi = {
 		enable = true;
 		nssmdns = true;
