@@ -41,6 +41,7 @@
 			zoom-us
 			docker
 			minio
+			klavaro
 		];
 	};
 }
