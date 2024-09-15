@@ -42,6 +42,8 @@
 			docker
 			minio
 			klavaro
+			superTuxKart
+			godot_4
 		];
 	};
 }
