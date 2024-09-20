@@ -32,6 +32,7 @@
 			jdk21_headless
 			jbang
 			sqlite
+			h2
 			taskwarrior
 			openshot-qt
 			xca
