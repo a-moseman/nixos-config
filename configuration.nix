@@ -9,6 +9,7 @@
 		./user.nix
 		./backups.nix
 		./laptop.nix
+		./zsh.nix
     	];
 	
 	virtualisation.docker.enable = true;
@@ -96,7 +97,6 @@
 		git-credential-oauth
 		restic
 		libnotify
-		zoxide
   		#  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   		#  wget
   	];
