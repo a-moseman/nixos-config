@@ -6,6 +6,7 @@
 		packages = with pkgs; [
 			thunderbird
 			librewolf
+			netsurf.browser
 			kate
 			zettlr
 			zotero
