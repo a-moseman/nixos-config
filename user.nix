@@ -46,7 +46,6 @@
 			klavaro
 			superTuxKart
 			godot_4
-			zsh
 		];
 	};
 }
