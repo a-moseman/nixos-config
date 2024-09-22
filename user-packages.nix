@@ -42,4 +42,5 @@ pkgs: with pkgs; [
 		superTuxKart
 		godot_4
 		paleta
+		tmux
 ]
