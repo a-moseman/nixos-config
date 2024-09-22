@@ -2,7 +2,7 @@
   description = "glyphical's NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+	nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";	
   };
 
   outputs = { self, nixpkgs }@inputs: {
@@ -12,6 +12,6 @@
 			./configuration.nix
 		];
 	};
-	home-manager.users.glyphical = import ./home.nix;
+	imports = [ ./home.nix ];
   };
 }

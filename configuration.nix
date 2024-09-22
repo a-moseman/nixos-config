@@ -6,12 +6,16 @@
   	imports = [
 		./hardware-configuration.nix # Include the results of the hardware scan.
 		./time_locale.nix
-		./user.nix
 		./backups.nix
 		./laptop.nix
-		./zsh.nix
-		./hyprland.nix
     	];
+
+        users.users.glyphical = {
+        	isNormalUser = true;
+                description = "Glyphical";
+                extraGroups = [ "networkmanager" "wheel" ];
+	};
+
 	
 	virtualisation.docker.enable = true;
 
@@ -29,10 +33,7 @@
 	services.printing.drivers = [ pkgs.brlaser ];
 
   	# Enable flakes - glyphical
-  	nix.settings.experimental-features = [ "nix-command" "flakes" ];
-	
-	# Enable unfree packages
-	nixpkgs.config.allowUnfree = true;	
+  	nix.settings.experimental-features = [ "nix-command" "flakes" ];	
 
 	services.envfs.enable = true; # allows for typical bash shebang
 
@@ -88,12 +89,10 @@
   	# List packages installed in system profile. To search, run:
   	# $ nix search wget
   	environment.systemPackages = with pkgs; [
-		kitty # required for the default hyprland config
 		git
 		git-credential-oauth
 		restic
 		libnotify
-		zoxide
   		#  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   		#  wget
   	];
