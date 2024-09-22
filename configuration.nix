@@ -8,14 +8,9 @@
 		./time_locale.nix
 		./backups.nix
 		./laptop.nix
+		./user.nix
+		./zsh.nix
     	];
-
-        users.users.glyphical = {
-        	isNormalUser = true;
-                description = "Glyphical";
-                extraGroups = [ "networkmanager" "wheel" ];
-	};
-
 	
 	virtualisation.docker.enable = true;
 
@@ -89,6 +84,8 @@
   	# List packages installed in system profile. To search, run:
   	# $ nix search wget
   	environment.systemPackages = with pkgs; [
+		zsh
+		zoxide
 		git
 		git-credential-oauth
 		restic

@@ -1,7 +1,4 @@
-{ config, pkgs, ...}: {
-	nixpkgs.config.allowUnfree = true;
-	 home.packages = with pkgs; [
-		zoxide
+pkgs: with pkgs; [
 		thunderbird
 		librewolf
 		netsurf.browser
@@ -45,5 +42,4 @@
 		superTuxKart
 		godot_4
 		paleta
-	];
-}
+]
