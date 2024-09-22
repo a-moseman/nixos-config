@@ -10,6 +10,7 @@
 		./backups.nix
 		./laptop.nix
 		./zsh.nix
+		./hyprland.nix
     	];
 	
 	virtualisation.docker.enable = true;
@@ -51,11 +52,15 @@
 	};
 
   	# Enable the X11 windowing system.
-  	services.xserver.enable = true;
-
-  	# Enable the KDE Plasma Desktop Environment.
-  	services.xserver.displayManager.sddm.enable = true;
-  	services.xserver.desktopManager.plasma5.enable = true;
+  	services.xserver = {
+		enable = true;
+		displayManager = {
+			sddm.enable = true;	
+		};
+		desktopManager = {
+			plasma5.enable = true;
+		};
+	};
 
   	# Configure keymap in X11
   	services.xserver = {
@@ -83,6 +88,7 @@
   	# List packages installed in system profile. To search, run:
   	# $ nix search wget
   	environment.systemPackages = with pkgs; [
+		kitty # required for the default hyprland config
 		git
 		git-credential-oauth
 		restic

@@ -46,6 +46,7 @@
 			klavaro
 			superTuxKart
 			godot_4
+			paleta
 		];
 	};
 }
