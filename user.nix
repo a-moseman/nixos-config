@@ -4,6 +4,6 @@
                 isNormalUser = true;
                 description = "Glyphical";
                 extraGroups = [ "networkmanager" "wheel" ];
-                packages = (import ./user-packages.nix pkgs);
+                packages = (import ./packages/user/all.nix pkgs);
         };	
 }
