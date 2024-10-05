@@ -5,10 +5,9 @@
 { config, pkgs, ... }: {
   	imports = [
 		./hardware-configuration.nix # Include the results of the hardware scan.
-		./time_locale.nix
 		./backups.nix
-		./laptop.nix
 		./user.nix
+		./settings/all.nix
 		./programs/all.nix
     	];
 	
