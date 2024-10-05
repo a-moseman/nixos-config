@@ -9,8 +9,7 @@
 		./backups.nix
 		./laptop.nix
 		./user.nix
-		./zsh.nix
-		./ollama.nix
+		./programs/all.nix
     	];
 	
 	hardware.bluetooth.enable = true;
