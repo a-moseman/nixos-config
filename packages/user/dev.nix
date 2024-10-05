@@ -4,6 +4,7 @@ pkgs: with pkgs; [
 	sqlite
 	h2
 	jdk21_headless
+	processing
 	jbang
 	nodejs
 	python312

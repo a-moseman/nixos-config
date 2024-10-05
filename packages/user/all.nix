@@ -13,9 +13,6 @@ pkgs: with pkgs;
 		nudoku
 		taskwarrior
 		openshot-qt
-		processing
-		milkytracker
-		lmms
 		klavaro
 		superTuxKart
 		paleta
