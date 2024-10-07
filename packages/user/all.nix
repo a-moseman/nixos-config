@@ -5,7 +5,6 @@ pkgs: with pkgs;
 		(import ./sec.nix pkgs) ++
 		(import ./communication.nix pkgs) ++
 		[
-		hydrus
 		wcalc
 		dutree
 		gimp
