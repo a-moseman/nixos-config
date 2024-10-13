@@ -15,4 +15,5 @@ pkgs: with pkgs;
 		klavaro
 		superTuxKart
 		paleta
+		youtube-dl
 ]
