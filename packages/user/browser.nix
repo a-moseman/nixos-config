@@ -1,4 +1,5 @@
 pkgs: with pkgs; [
-    librewolf
-    netsurf.browser
+	librewolf
+	firefox
+	netsurf.browser
 ]
