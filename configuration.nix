@@ -27,7 +27,7 @@
 		package = pkgs.mariadb;
 	};
 
-	services.printing.drivers = [ pkgs.brlaser ];
+	services.printing.drivers = [ pkgs.brlaser pkgs.gutenprint ];
 
   	# Enable flakes - glyphical
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];	
