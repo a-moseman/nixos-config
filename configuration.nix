@@ -13,12 +13,14 @@
 	
 	hardware.bluetooth.enable = true;
 	hardware.bluetooth.powerOnBoot = true;
+	
+	hardware.sane.enable = true;
 
 	virtualisation.docker.enable = true;
 
 	services.avahi = {
 		enable = true;
-		nssmdns = true;
+		nssmdns4 = true;
 		openFirewall = true;
 	};
 
@@ -27,7 +29,7 @@
 		package = pkgs.mariadb;
 	};
 
-	services.printing.drivers = [ pkgs.brlaser pkgs.gutenprint ];
+	services.printing.drivers = [ pkgs.brlaser pkgs.epson-escpr ];
 
   	# Enable flakes - glyphical
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];	
