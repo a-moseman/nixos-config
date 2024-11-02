@@ -16,6 +16,7 @@
 	
 	hardware.sane.enable = true;
 	hardware.sane.extraBackends = [ pkgs.sane-airscan pkgs.epkowa ];
+	services.ipp-usb.enable = true;
 
 	virtualisation.docker.enable = true;
 
