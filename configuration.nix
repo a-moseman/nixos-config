@@ -15,6 +15,7 @@
 	hardware.bluetooth.powerOnBoot = true;
 	
 	hardware.sane.enable = true;
+	hardware.sane.extraBackends = [ pkgs.sane-airscan ];
 
 	virtualisation.docker.enable = true;
 
