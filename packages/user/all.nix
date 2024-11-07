@@ -16,4 +16,5 @@ pkgs: with pkgs;
 		superTuxKart
 		paleta
 		youtube-dl
+		qgis-ltr
 ]
