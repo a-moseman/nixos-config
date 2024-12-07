@@ -7,4 +7,5 @@ pkgs: with pkgs; [
     tomb
     pinentry
     pinentry-curses
+    gnupg
 ]

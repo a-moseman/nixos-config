@@ -17,4 +17,5 @@ pkgs: with pkgs;
 		paleta
 		youtube-dl
 		qgis-ltr
+		qemu
 ]

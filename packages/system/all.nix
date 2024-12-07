@@ -6,6 +6,4 @@
     restic
     libnotify
     libsForQt5.bismuth
-    wineWowPackages.stable
-    telegram-desktop
  ]
