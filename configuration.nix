@@ -18,6 +18,7 @@
 	hardware.sane.extraBackends = [ pkgs.sane-airscan pkgs.epkowa ];
 	services.ipp-usb.enable = true;
 
+
 	virtualisation.docker.enable = true;
 
 	virtualisation.libvirtd.enable = true;
@@ -34,7 +35,7 @@
 		package = pkgs.mariadb;
 	};
 
-	services.printing.drivers = [ pkgs.brlaser pkgs.epson-escpr ];
+	services.printing.drivers = [ pkgs.epson-escpr ];
 
   	# Enable flakes - glyphical
   	nix.settings.experimental-features = [ "nix-command" "flakes" ];	

@@ -18,4 +18,5 @@ pkgs: with pkgs;
 		youtube-dl
 		qgis-ltr
 		qemu
+		wget
 ]
