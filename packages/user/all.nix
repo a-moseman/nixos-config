@@ -15,7 +15,7 @@ pkgs: with pkgs;
 		klavaro
 		superTuxKart
 		paleta
-		youtube-dl
+		yt-dlp
 		qgis-ltr
 		qemu
 		wget
