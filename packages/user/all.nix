@@ -20,6 +20,5 @@ pkgs: with pkgs;
 		qemu
 		wget
 		sshpass
-		lmms
 		dexed
 ]
