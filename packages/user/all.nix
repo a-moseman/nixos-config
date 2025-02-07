@@ -20,6 +20,6 @@ pkgs: with pkgs;
 		qemu
 		wget
 		sshpass
-		yabridge
+		lmms
 		dexed
 ]
