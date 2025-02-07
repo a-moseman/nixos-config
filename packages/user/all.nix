@@ -19,4 +19,5 @@ pkgs: with pkgs;
 		qgis-ltr
 		qemu
 		wget
+		sshpass
 ]

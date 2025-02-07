@@ -3,7 +3,9 @@ pkgs: with pkgs; [
 	tmux
 	sqlite
 	h2
-	jdk21_headless
+	#jdk21_headless
+	jdk
+	fontconfig
 	processing
 	jbang
 	nodejs
@@ -12,4 +14,8 @@ pkgs: with pkgs; [
 	godot_4
 	docker
 	minio
+	python312Packages.pip
+	ghidra
+	gcc
+	gnumake
 ]
