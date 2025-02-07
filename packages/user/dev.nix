@@ -10,6 +10,9 @@ pkgs: with pkgs; [
 	jbang
 	nodejs
 	python312
+	python312Packages.keras
+	python312Packages.torch
+	python312Packages.tensorflow
 	plantuml
 	godot_4
 	docker
