@@ -1,11 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }: {
   	imports = [
 		./hardware-configuration.nix # Include the results of the hardware scan.
-		./backups.nix
+		#./backups.nix
 		./user.nix
 		./settings/all.nix
 		./programs/all.nix
@@ -70,8 +66,8 @@
 
   	# Configure keymap in X11
   	services.xserver = {
-    		layout = "us";
-    		xkbVariant = "";
+    		xkb.layout = "us";
+    		xkb.variant = "";
   	};
 
   	# Enable CUPS to print documents.

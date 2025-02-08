@@ -8,5 +8,5 @@
     restic
     libnotify
     libsForQt5.bismuth
-    htpasswd
+    apacheHttpd
  ]

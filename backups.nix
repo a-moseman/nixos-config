@@ -1,3 +1,5 @@
+
+/* this just doesn't seem to work
 { config, pkgs, ... }: {
 	security.wrappers.restic = {
 		source = "${pkgs.restic.out}/bin/restic";
@@ -73,3 +75,4 @@
 		];
 	};
 }
+*/
