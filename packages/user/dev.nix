@@ -9,8 +9,7 @@ pkgs: with pkgs; [
 	processing
 	jbang
 	nodejs
-	python312
-	python312Packages.virtualenv
+	python312 # should just use shell.nix approach instead
 	plantuml
 	godot_4
 	docker
