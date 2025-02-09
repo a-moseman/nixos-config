@@ -8,4 +8,5 @@ pkgs: with pkgs; [
     pinentry
     pinentry-curses
     gnupg
+    openssl
 ]
