@@ -10,7 +10,6 @@ pkgs: with pkgs; [
 	infamousPlugins
 	x42-plugins
 	fmtoy
-	fmsynth
 	oxefmsynth
 	xsynth_dssi
 ]
