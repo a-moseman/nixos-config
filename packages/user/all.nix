@@ -4,6 +4,7 @@ pkgs: with pkgs;
 		(import ./browser.nix pkgs) ++
 		(import ./sec.nix pkgs) ++
 		(import ./communication.nix pkgs) ++
+		(import ./music.nix pkgs) ++
 		[
 		wcalc
 		dutree
