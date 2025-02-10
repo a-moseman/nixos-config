@@ -4,4 +4,5 @@ pkgs:
 		zettlr
 		zotero
 		libreoffice
+		texlive.combined.scheme-basic 
     ]
