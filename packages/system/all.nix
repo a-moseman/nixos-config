@@ -9,4 +9,5 @@
     libnotify
     libsForQt5.bismuth
     apacheHttpd
+    pipewire.jack # <- for JACK/pipewire in ardour
  ]
