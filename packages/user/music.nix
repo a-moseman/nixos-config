@@ -1,3 +1,6 @@
 pkgs: with pkgs; [
-    ardour
+	# DAWs:
+	ardour
+	# plugins:
+	dexed
 ]

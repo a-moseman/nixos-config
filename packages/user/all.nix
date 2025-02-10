@@ -21,5 +21,4 @@ pkgs: with pkgs;
 		qemu
 		wget
 		sshpass
-		dexed
 ]
