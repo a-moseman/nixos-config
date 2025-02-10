@@ -9,4 +9,8 @@ pkgs: with pkgs; [
 	distrho-ports # contains dexed
 	infamousPlugins
 	x42-plugins
+	fmtoy
+	fmsynth
+	oxefmsynth
+	xsynth_dssi
 ]
