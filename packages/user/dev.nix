@@ -17,5 +17,8 @@ pkgs: with pkgs; [
 	python312Packages.pip
 	ghidra
 	gcc
+	gdb
 	gnumake
+	meson
+	python312Packages.ninja
 ]

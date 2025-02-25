@@ -1,12 +1,25 @@
 { config, pkgs, ... }: {
   	imports = [
 		./hardware-configuration.nix # Include the results of the hardware scan.
-		#./backups.nix
+		./backups.nix
 		./user.nix
 		./settings/all.nix
 		./programs/all.nix
     	];
 	
+	environment.etc."myscripts/mem.sh" = {
+		mode = "0555";
+		text = ''
+			#!/usr/bin/env bash
+			path="/etc/myscripts/BrainPlus-1.0-SNAPSHOT.jar"
+			java -jar $path $(pwd) "$@"
+		'';
+	};
+	environment.shellAliases = {
+		mem = "sh /etc/myscripts/mem.sh";
+		cd = "z";
+	};
+
 	hardware.bluetooth.enable = true;
 	hardware.bluetooth.powerOnBoot = true;
 	
