@@ -20,5 +20,6 @@ pkgs: with pkgs; [
 	gdb
 	gnumake
 	meson
+	flamegraph
 	python312Packages.ninja
 ]
