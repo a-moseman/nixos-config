@@ -22,4 +22,5 @@ pkgs: with pkgs; [
 	meson
 	flamegraph
 	python312Packages.ninja
+	linuxPackages_latest.perf
 ]
