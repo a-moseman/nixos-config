@@ -1,4 +1,5 @@
 pkgs: with pkgs; [
+	spotify
 	# DAWs:
 	ardour
 	# plugins:
