@@ -1,7 +1,7 @@
 pkgs: with pkgs; [
 	jetbrains.idea-community
 	tmux
-	vim
+	neovim
 	sqlite
 	h2
 	#jdk21_headless
