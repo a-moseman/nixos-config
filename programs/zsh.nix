@@ -6,7 +6,7 @@
 
                 ohMyZsh = {
                         enable = true;
-                        theme = "agnoster";
+                        theme = "gnzh";
                 };
         };
 }
