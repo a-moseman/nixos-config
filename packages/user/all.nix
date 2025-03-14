@@ -14,7 +14,6 @@ pkgs: with pkgs;
 		taskwarrior
 		openshot-qt
 		klavaro
-		superTuxKart
 		paleta
 		yt-dlp
 		qgis-ltr
