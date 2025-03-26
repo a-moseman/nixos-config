@@ -9,4 +9,5 @@ pkgs: with pkgs; [
     pinentry-curses
     gnupg
     openssl
+    calyx-vpn
 ]
