@@ -10,4 +10,5 @@ pkgs: with pkgs; [
     gnupg
     openssl
     calyx-vpn
+    riseup-vpn
 ]
