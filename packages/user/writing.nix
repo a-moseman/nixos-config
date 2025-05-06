@@ -5,4 +5,5 @@ pkgs:
 		zotero
 		libreoffice
 		texlive.combined.scheme-medium
+		texmaker
     ]
