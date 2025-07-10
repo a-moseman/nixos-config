@@ -79,8 +79,8 @@
 	};
 
 	boot.kernelParams = ["nvidia_drm.modeset=1"]; # for GPU
-	hardward.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-	hardware.opengl.enable = true;
+	hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable; # for GPU
+	hardware.opengl.enable = true; # for GPU
 
   	# Configure keymap in X11
   	services.xserver = {
