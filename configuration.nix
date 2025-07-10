@@ -75,12 +75,12 @@
 		desktopManager = {
 			plasma5.enable = true;
 		};
-		videoDrivers = [ "nvidia" ]; # for GPU
+		#videoDrivers = [ "nvidia" ]; # for GPU
 	};
 
-	boot.kernelParams = ["nvidia_drm.modeset=1"]; # for GPU
+	#boot.kernelParams = ["nvidia_drm.modeset=1"]; # for GPU
 	#hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable; # for GPU
-	hardware.opengl.enable = true; # for GPU
+	#hardware.opengl.enable = true; # for GPU
 
   	# Configure keymap in X11
   	services.xserver = {
