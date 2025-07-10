@@ -7,6 +7,7 @@
 		./programs/all.nix
     	];
 	
+
 	environment.etc."myscripts/mem.sh" = {
 		mode = "0555";
 		text = ''
@@ -74,7 +75,12 @@
 		desktopManager = {
 			plasma5.enable = true;
 		};
+		videoDrivers = [ "nvidia" ]; # for GPU
 	};
+
+	boot.kernelParams = ["nvidia_drm.modeset=1"]; # for GPU
+	hardward.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+	hardware.opengl.enable = true;
 
   	# Configure keymap in X11
   	services.xserver = {
