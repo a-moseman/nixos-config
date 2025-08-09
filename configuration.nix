@@ -7,7 +7,6 @@
 		./programs/all.nix
     	];
 	
-
 	environment.etc."myscripts/mem.sh" = {
 		mode = "0555";
 		text = ''
@@ -38,7 +37,6 @@
 	hardware.sane.enable = true;
 	hardware.sane.extraBackends = [ pkgs.sane-airscan pkgs.epkowa ];
 	services.ipp-usb.enable = true;
-
 
 	virtualisation.libvirtd.enable = true;
 	programs.virt-manager.enable = true;
