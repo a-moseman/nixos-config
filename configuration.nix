@@ -21,16 +21,16 @@
 	};
 
 	# enable GPU
-	hardware.graphics.enable = true;
-	services.xserver.videoDrivers = [ "nvidia" ];
-	hardware.nvidia.open = true;
-	hardware.nvidia.prime = { # required for hybrid graphics (integrated and dedicated GPU)
-		intelBusId = "PCI:0:2:0";
-		nvidiaBusId = "PCI:1:0:0";
+	#hardware.graphics.enable = true;
+	#services.xserver.videoDrivers = [ "nvidia" ];
+	#hardware.nvidia.open = true;
+	#hardware.nvidia.prime = { # required for hybrid graphics (integrated and dedicated GPU)
+	#	intelBusId = "PCI:0:2:0";
+	#	nvidiaBusId = "PCI:1:0:0";
 		# following is command to find bus IDs
 		# nix shell nixpkgs#pciutils -c lspci -d ::03xx
-	};
-	hardware.nvidia.modesetting.enable = true;
+	#};
+	#hardware.nvidia.modesetting.enable = true;
 
 	hardware.bluetooth.enable = true;
 	hardware.bluetooth.powerOnBoot = true;
@@ -81,16 +81,12 @@
 		enable = true;
 		displayManager = {
 			sddm.enable = true;
-			sddm.settings.General.DisplayServer = "x11-user";	
+			# sddm.settings.General.DisplayServer = "x11-user"; # for GPU	
 		};
 		desktopManager = {
 			plasma5.enable = true;
 		};
 	};
-
-	#boot.kernelParams = ["nvidia_drm.modeset=1"]; # for GPU
-	#hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable; # for GPU
-	#hardware.opengl.enable = true; # for GPU
 
   	# Configure keymap in X11
   	services.xserver = {
