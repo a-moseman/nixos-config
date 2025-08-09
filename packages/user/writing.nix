@@ -1,6 +1,6 @@
 pkgs:
     with pkgs; [
-		kate
+		kdePackages.kate
 		zettlr
 		zotero
 		libreoffice
