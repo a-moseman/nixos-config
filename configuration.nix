@@ -29,7 +29,7 @@
 		nvidiaBusId = "PCI:1:0:0";
 		# following is command to find bus IDs
 		# nix shell nixpkgs#pciutils -c lspci -d ::03xx
-	#};
+	};
 	hardware.nvidia.modesetting.enable = true;
 
 	hardware.bluetooth.enable = true;
