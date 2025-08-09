@@ -20,6 +20,17 @@
 		mem = "sh /etc/myscripts/mem.sh";
 	};
 
+	# enable GPU
+	hardware.graphics.enable = true;
+	services.xserver.videoDrivers = [ "nvidia" ];
+	hardware.nvidia.open = true;
+	hardware.nvidia.prime = { # required for hybrid graphics (integrated and dedicated GPU)
+		intelBusId = "PCI:0:2:0";
+		nvidiaBusId = "PCI:1:0:0";
+		# following is command to find bus IDs
+		# nix shell nixpkgs#pciutils -c lspci -d ::03xx
+	};
+
 	hardware.bluetooth.enable = true;
 	hardware.bluetooth.powerOnBoot = true;
 	
@@ -75,7 +86,6 @@
 		desktopManager = {
 			plasma5.enable = true;
 		};
-		#videoDrivers = [ "nvidia" ]; # for GPU
 	};
 
 	#boot.kernelParams = ["nvidia_drm.modeset=1"]; # for GPU
