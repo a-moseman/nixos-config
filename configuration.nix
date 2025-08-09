@@ -82,7 +82,8 @@
   	services.xserver = {
 		enable = true;
 		displayManager = {
-			sddm.enable = true;	
+			sddm.enable = true;
+			sddm.settings.General.DisplayServer = "x11-user";	
 		};
 		desktopManager = {
 			plasma5.enable = true;
