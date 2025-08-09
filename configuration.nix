@@ -81,7 +81,7 @@
 		enable = true;
 		displayManager = {
 			sddm.enable = true;
-			# sddm.settings.General.DisplayServer = "x11-user"; # for GPU	
+			sddm.settings.General.DisplayServer = "x11-user"; # for GPU	
 		};
 		desktopManager = {
 			plasma5.enable = true;
