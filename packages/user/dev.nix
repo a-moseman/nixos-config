@@ -2,8 +2,6 @@ pkgs: with pkgs; [
 	jetbrains.idea-community
 	tmux
 	neovim
-	sqlite
-	h2
 	#jdk21_headless
 	jdk
 	fontconfig
@@ -12,9 +10,6 @@ pkgs: with pkgs; [
 	nodejs
 	python312 # should just use shell.nix approach instead
 	plantuml
-	#godot_4
-	#docker
-	#minio
 	python312Packages.pip
 	ghidra
 	gcc
