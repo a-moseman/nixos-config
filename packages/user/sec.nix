@@ -1,7 +1,7 @@
 pkgs: with pkgs; [
     tor
     tor-browser-bundle-bin
-    kleopatra
+    kdePackages.kleopatra
     xca
     wireshark
     tomb
