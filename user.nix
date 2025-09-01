@@ -3,7 +3,7 @@
 	users.users.glyphical = {
                 isNormalUser = true;
                 description = "Glyphical";
-                extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+                extraGroups = [ "networkmanager" "wheel" "scanner" "lp" "video" ];
                 packages = (import ./packages/user/all.nix pkgs);
         };	
 }
