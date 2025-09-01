@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
 	imports = [
-		#./laptop.nix
+		./laptop.nix
 		./time_locale.nix
 	];
 }
